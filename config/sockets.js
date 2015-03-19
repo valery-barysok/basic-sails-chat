@@ -131,5 +131,8 @@ module.exports.sockets = {
 
   // More configuration options for Sails+Socket.io:
   // http://sailsjs.org/#/documentation/reference/sails.config/sails.config.sockets.html
-
+  
+  // because Heroku do not support sticky load-balancing we need to change default transports based on docs
+  // http://sailsjs.org/#!/documentation/concepts/Deployment/Scaling.html?q=configuring-your-app-for-a-clustered-deployment
+  transports: ['websocket']
 };
