@@ -22,6 +22,7 @@ module.exports.http = {
   ****************************************************************************/
 
   // middleware: {
+  middleware: {
 
   /***************************************************************************
   *                                                                          *
@@ -48,6 +49,21 @@ module.exports.http = {
     //   '500'
     // ],
 
+    order: [
+      'startRequestTimer',
+      'cookieParser',
+      'session',
+      'bodyParser',
+      'handleBodyParserError',
+      'compress',
+      'methodOverride',
+      'router',
+      'www',
+      'favicon',
+      '404',
+      '500'
+    ],
+
   /****************************************************************************
   *                                                                           *
   * Example custom middleware; logs each request to the console.              *
@@ -72,6 +88,7 @@ module.exports.http = {
     // bodyParser: require('skipper')
 
   // },
+  }
 
   /***************************************************************************
   *                                                                          *
