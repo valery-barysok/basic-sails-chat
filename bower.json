@@ -1,0 +1,39 @@
+{
+  "name": "basic-sails-chat",
+  "version": "0.0.1",
+  "author": "Valery Barysok <valery.barysok@gmail.com>",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "bootstrap": "~3.3.4"
+   },
+  "exportsOverride": {
+    "jquery": {
+      "js": [
+        "dist/*.js",
+        "!dist/*.min.js"
+      ]
+    },
+    "bootstrap": {
+      "js": [
+        "dist/js/*.js",
+        "!dist/js/*.min.js",
+        "!dist/js/npm.js"
+      ],
+      "fonts": "dist/fonts/*.*",
+      "less": "less/*.less",
+      "less/mixins": "less/mixins/*.less"
+    }
+  },
+  "resolutions": {
+    "jquery": "~2.1.3",
+    "bootstrap": "~3.3.4"
+  }
+}

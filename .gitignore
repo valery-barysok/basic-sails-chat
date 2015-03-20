@@ -66,6 +66,10 @@ config/local.js
 # 
 ################################################
 
+assets/vendor/**/*
+.bower-cache
+.bower-registry
+.bower-tmp
 node_modules
 bower_components
 

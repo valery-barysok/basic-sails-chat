@@ -21,6 +21,16 @@ module.exports = function (grunt) {
         dest: '.tmp/public/styles/',
         ext: '.css'
       }]
+    },
+
+    bootstrap: {
+      files: [{
+        expand: true,
+        cwd: 'assets/styles/',
+        src: ['bootstrap.less'],
+        dest: '.tmp/public/vendor/bootstrap/css/',
+        ext: '.css'
+      }]
     }
   });
 
