@@ -27,6 +27,7 @@ module.exports.policies = {
   ***************************************************************************/
 
   // '*': true,
+  '*': [ 'passport' ],
 
   /***************************************************************************
   *                                                                          *
@@ -48,4 +49,8 @@ module.exports.policies = {
 		// before letting any users feed our rabbits
 		// feed : ['isNiceToAnimals', 'hasRabbitFood']
 	// }
+
+  chat: {
+    '*': [ 'passport', 'isAuthenticated' ]
+  }
 };

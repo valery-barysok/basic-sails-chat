@@ -1,18 +1,32 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-offset-4 col-sm-4">
-      <form action="/signin" method="post">
-        <h2 class="form-signin-heading">Please sign in / sign up</h2>
-        <div class="form-group">
-          <input type="text" id="username" name="username" class="form-control" placeholder="User name" required="true"
-                 autofocus="true">
-        </div>
-        <div class="form-group">
-          <input type="password" id="password" name="password" class="form-control" placeholder="Password" required="">
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in / sign up</button>
-      </form>
-    </div>
+    {{#if user}}
+      <div class="alert alert-info" role="alert">
+        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+        You are already signed in. <a href="/chat">Go to Chat</a>
+      </div>
+    {{else}}
+      <div class="col-sm-offset-4 col-sm-4">
+        <form action="/" method="post">
+          <h2 class="form-signin-heading">Please sign in / sign up</h2>
+          {{#if message}}
+            <div class="alert alert-danger" role="alert">
+              <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+              <span>Error:</span>
+              {{message}}
+            </div>
+          {{/if}}
+          <div class="form-group">
+            <input type="text" id="username" name="username" class="form-control" placeholder="User name" required="true"
+                   autofocus="true">
+          </div>
+          <div class="form-group">
+            <input type="password" id="password" name="password" class="form-control" placeholder="Password" required="">
+          </div>
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in / sign up</button>
+        </form>
+      </div>
+      {{/if}}
   </div>
 </div>
 
