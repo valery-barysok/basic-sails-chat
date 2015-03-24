@@ -20,6 +20,12 @@ module.exports = {
       required: true
     },
 
+    channels: {
+      collection: 'channel',
+      via: 'members',
+      dominant: true
+    },
+
     checkPassword: function(password, next) {
       return PasswordService.compare(password, this.toObject().password, next);
     }
