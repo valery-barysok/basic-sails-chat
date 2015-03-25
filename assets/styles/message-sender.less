@@ -1,0 +1,24 @@
+@sender-size-base: 81px;
+
+.message-sender {
+  position: fixed;
+  background: white;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: @sender-size-base + 40px;
+  z-index: 50;
+}
+
+.message-sender-height {
+  height: @sender-size-base;
+}
+
+.message-sender-textarea {
+  overflow-y: hidden;
+  height: @sender-size-base - 3px;
+  width: 97%;
+  margin: 20px;
+  padding: 9px 30px 9px 8px;
+  resize: none;
+}

@@ -1,6 +1,11 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row">
+    <div class="col-sm-2" style="margin: 0; padding: 0;">
+      {{>chat/primary-sidebar}}
+    </div>
+    <div class="col-sm-10">
+      {{>chat/messages}}
+      {{>chat/message-sender}}
+    </div>
   </div>
 </div>
-
-
